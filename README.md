@@ -1,5 +1,9 @@
 # Student Dashboard Project
 
+[Project Live Site at Netlify](https://mkleemoff-10-1-student-dashboard.netlify.app/)
+
+[Trello board for project](https://trello.com/b/ARQ7PzUa/101-student-dashboard-project-module-3)
+
 For this assignment, you will build a student dashboard that will make use of already existing data stored in a JSON file. Users will be able to view students in several ways as well as add comments to those students.
 
 ## Project scoring
