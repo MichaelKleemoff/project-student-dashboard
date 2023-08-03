@@ -1,6 +1,6 @@
 # Student Dashboard Project
 
-[Project Live Site at Netlify](https://mkleemoff-10-1-student-dashboard.netlify.app/)
+[Project live site at Netlify](https://mkleemoff-10-1-student-dashboard.netlify.app/)
 
 [Trello board for project](https://trello.com/b/ARQ7PzUa/101-student-dashboard-project-module-3)
 
