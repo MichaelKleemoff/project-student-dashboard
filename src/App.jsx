@@ -15,7 +15,6 @@ export default function App() {
 			<main>
 				<CohortListMenu
 					studentData={studentData}
-					cohortName={cohortName}
 					setCohortName={setCohortName}
 				/>
 				<StudentList
