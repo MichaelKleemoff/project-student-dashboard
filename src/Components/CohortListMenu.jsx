@@ -19,9 +19,9 @@ export default function CohortListMenu({ studentData, setCohortName }) {
 		<div className='cohort-list'>
 			<h2>Choose a Class by Start Date</h2>
 
-			<h3 onClick={() => setCohortName('All Students')}>All Students</h3>
-
 			<ul>
+				<li onClick={() => setCohortName('All Students')}>All Students</li>
+
 				{sortedCohortList.map((cohortName) => (
 					<li
 						key={crypto.randomUUID()}
