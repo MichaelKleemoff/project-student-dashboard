@@ -48,6 +48,30 @@ main {
 	color: rgb(171, 104, 82);
 }
 
+.cohort-list ul {
+	list-style-type: none;
+}
+
+.cohort-list li {
+	color: rgb(171, 104, 82);
+	transition: all 0.4s ease;
+	transform: scale(1);
+	border-bottom: 2px solid green;
+	margin: 50px auto;
+	width: 85%;
+	padding: 5px 0px;
+}
+
+.cohort-list li:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+	background-color: rgb(171, 104, 82);
+	color: azure;
+	padding: 5px;
+	box-sizing: content-box;
+	border-radius: 5px;
+}
+
 /* StudentList */
 .student-list {
 	display: grid;
