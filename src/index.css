@@ -42,7 +42,8 @@ main {
 	margin: 0.9em;
 }
 
-.cohort-list h2 {
+.cohort-list h2,
+.cohort-list h3 {
 	text-align: center;
 	color: rgb(171, 104, 82);
 }
