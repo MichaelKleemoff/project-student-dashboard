@@ -84,3 +84,12 @@ main {
 	padding-left: 15px;
 	background-color: rgb(245, 245, 135);
 }
+
+.student-list-color {
+	color: rgb(0, 101, 7);
+}
+
+.total-students-color,
+.student-details {
+	color: olivedrab;
+}
