@@ -39,13 +39,12 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	width: 35vw;
-	margin: 1.1em;
+	margin: 0.9em;
 }
 
 .cohort-list h2 {
 	text-align: center;
 	color: rgb(171, 104, 82);
-	margin: 1.1em;
 }
 
 /* StudentList */
