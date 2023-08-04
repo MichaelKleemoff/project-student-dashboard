@@ -38,8 +38,10 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	width: 35vw;
-	margin: 0.9em;
+	padding: 10px;
+	margin: 1.1em;
 }
 
 .cohort-list h2,
@@ -50,15 +52,18 @@ main {
 
 .cohort-list ul {
 	list-style-type: none;
+	width: 80%;
+	padding: 10px;
 }
 
 .cohort-list li {
 	color: rgb(171, 104, 82);
+	font-weight: 600;
 	transition: all 0.4s ease;
 	transform: scale(1);
 	border-bottom: 2px solid green;
 	margin: 50px auto;
-	width: 85%;
+	width: 80%;
 	padding: 5px 0px;
 }
 
