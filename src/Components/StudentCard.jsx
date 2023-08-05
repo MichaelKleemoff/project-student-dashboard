@@ -1,14 +1,16 @@
 import { useState } from 'react';
 
+import StudentDetailsCard from './StudentDetails';
+
 export default function StudentCard({ student }) {
 	const {
 		names: { preferredName, middleName, surname },
 		username,
 		dob,
 		profilePhoto,
-		codewars,
-		cohort,
-		certifications,
+		codewars: { current, goal },
+		cohort: { scores },
+		certifications: { resume, linkedin, github, mockInterview },
 	} = student;
 
 	const date = new Date(dob);
@@ -21,6 +23,15 @@ export default function StudentCard({ student }) {
 
 	const birthDate = date.toLocaleDateString('en-US', options);
 
+	const [show, setShow] = useState(false);
+
+	const graduate =
+		current.total > 600 && resume && linkedin && github && mockInterview ? (
+			<p>On Track to Graduate</p>
+		) : (
+			''
+		);
+
 	return (
 		<div className='student-card'>
 			<section className='student-info-image'>
@@ -29,6 +40,7 @@ export default function StudentCard({ student }) {
 					alt={`${preferredName} ${middleName} ${surname}`}
 				/>
 			</section>
+
 			<section className='student-info student-info-color'>
 				<h2>
 					{preferredName} {middleName[0]}. {surname}
@@ -41,6 +53,34 @@ export default function StudentCard({ student }) {
 					{birthDate}
 				</p>
 			</section>
+
+			<section className='show-section'>
+				<section className='show-btn-section'>
+					<h4>
+						<button className='show-btn' onClick={() => setShow(!show)}>
+							{show ? 'Show Less...' : 'Show More...'}
+						</button>
+					</h4>
+				</section>
+				<section className='show-more'>
+					{show && (
+						<StudentDetailsCard
+							codewarsCurrentTotal={current.total}
+							codewarsCurrentLastWeek={current.lastWeek}
+							codewarsGoalTotal={goal.total}
+							cohortScoresAssignments={scores.assignments}
+							cohortScoresProjects={scores.projects}
+							cohortScoresAssessments={scores.assessments}
+							certificationsResume={resume}
+							certificationsLinkedIn={linkedin}
+							certificationsGitHub={github}
+							certificationsMockInterview={mockInterview}
+						/>
+					)}
+				</section>
+			</section>
+
+			<aside className='ontrack-graduate'>{graduate}</aside>
 		</div>
 	);
 }

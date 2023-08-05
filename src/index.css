@@ -33,7 +33,7 @@ header h1 {
 main {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-items: flex-start;
 	gap: 30px;
 	width: 100%;
@@ -47,7 +47,7 @@ main {
 	align-items: center;
 	width: 35vw;
 	padding: 10px;
-	margin: 1.1em;
+	margin: 1.1em auto;
 }
 
 .cohort-list h2,
@@ -85,9 +85,13 @@ main {
 
 /* StudentList */
 .student-list {
-	display: grid;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-content: center;
 	width: 60vw;
 	padding: 25px;
+	gap: 5px;
 	background-color: rgb(245, 245, 135);
 }
 
@@ -119,8 +123,7 @@ main {
 	gap: 7px;
 	margin: 20px 15px;
 	width: 95%;
-	/* rgb(230, 181, 164) */
-	background-color: rgb(190, 206, 105);
+	background-color: rgb(206, 188, 105);
 	border: 4px outset gold;
 	border-radius: 12px;
 	box-shadow: 4px 4px 4px rgba(90, 90, 90, 0.4);
@@ -153,11 +156,88 @@ main {
 	padding: 25px;
 }
 
-.ontrack-graduate,
 .student-info-color {
 	color: azure;
 }
 
+.ontrack-graduate {
+	display: grid;
+	grid-column: 3;
+	gap: 20px;
+	margin-right: 0;
+	margin-top: 5px;
+	color: green;
+}
+
 .birth-date {
 	color: gold;
+}
+
+/* Show Section */
+.show-section {
+	display: grid;
+	grid-column: 1 / span 3;
+	grid-row: 2;
+}
+
+.student-details-color1 {
+	color: rgb(175, 79, 56);
+}
+
+.student-details-color2 {
+	color: black;
+}
+
+.show-more {
+	background-color: blanchedalmond;
+}
+
+.show-btn-section {
+	display: grid;
+	grid-column: 1;
+	margin-left: 33.3%;
+	margin-bottom: 10px;
+}
+
+.show-btn {
+	background-color: rgb(255, 238, 0, 0.7);
+	border-radius: 8px;
+	border: 2px outset lightcyan;
+	padding: 5px;
+	transition: all 0.4s ease;
+	transform: scale(1);
+	color: rgb(180, 65, 36);
+	font-weight: 600;
+	text-shadow: 1px 1px 2px rgb(70, 70, 70, 0.5);
+}
+
+.show-btn:hover {
+	background-color: wheat;
+	color: rgb(252, 96, 56);
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+/* StudentDetailsCard */
+.details-card {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	width: 100%;
+	padding: 20px;
+}
+
+.details-aside h3 {
+	color: rgb(115, 52, 37);
+	margin-bottom: 10px;
+}
+
+.details-aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 12px;
+	margin-bottom: 1.1em;
 }
