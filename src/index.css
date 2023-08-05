@@ -190,6 +190,8 @@ main {
 
 .show-more {
 	background-color: blanchedalmond;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
 }
 
 .show-btn-section {
