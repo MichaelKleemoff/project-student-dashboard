@@ -1,3 +1,7 @@
+import { useState } from 'react';
+
+import OneOnOneNotes from './OneOnOneNotes';
+
 export default function StudentDetailsCard({
 	codewarsCurrentTotal,
 	codewarsCurrentLastWeek,
@@ -9,7 +13,11 @@ export default function StudentDetailsCard({
 	certificationsLinkedIn,
 	certificationsGitHub,
 	certificationsMockInterview,
+	notes,
 }) {
+	const [oneOnOneNotes, setOneOnOneNotes] = useState([]);
+	console.log(notes);
+
 	const percentFormat = Number(
 		((codewarsCurrentTotal / codewarsGoalTotal) * 100).toFixed(0)
 	);
@@ -117,6 +125,7 @@ export default function StudentDetailsCard({
 					)}
 				</h4>
 			</aside>
+			<OneOnOneNotes notes={notes} />
 		</div>
 	);
 }

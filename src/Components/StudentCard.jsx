@@ -11,6 +11,7 @@ export default function StudentCard({ student }) {
 		codewars: { current, goal },
 		cohort: { scores },
 		certifications: { resume, linkedin, github, mockInterview },
+		notes,
 	} = student;
 
 	const date = new Date(dob);
@@ -75,6 +76,7 @@ export default function StudentCard({ student }) {
 							certificationsLinkedIn={linkedin}
 							certificationsGitHub={github}
 							certificationsMockInterview={mockInterview}
+							notes={notes}
 						/>
 					)}
 				</section>
