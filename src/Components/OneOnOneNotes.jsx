@@ -10,7 +10,7 @@ export default function OneOnOneNotes({
 	return (
 		<aside className='notes-aside'>
 			<h3>1-on-1 Notes</h3>
-			<form>
+			<form className='notes-aside-form'>
 				<label htmlFor='commenter'>
 					Commenter Name:{' '}
 					<input type='text' name='commenter-name' id='commenter' />
@@ -20,7 +20,7 @@ export default function OneOnOneNotes({
 					Comment: <input type='text' name='comment-name' id='comment' />
 				</label>
 
-				<section>
+				<section className='notes-btn-section'>
 					<input className='notes-btn' type='submit' value='Add Note' />
 				</section>
 			</form>

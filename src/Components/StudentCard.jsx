@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import StudentDetailsCard from './StudentDetails';
+import StudentDetailsCard from './StudentDetailsCard';
 
 export default function StudentCard({ student }) {
 	const {
@@ -63,6 +63,7 @@ export default function StudentCard({ student }) {
 						</button>
 					</h4>
 				</section>
+
 				<section className='show-more'>
 					{show && (
 						<StudentDetailsCard

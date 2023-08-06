@@ -1,8 +1,12 @@
+/* Reset */
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
+/* General */
 
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,6 +14,7 @@ body {
 }
 
 /* NavBar */
+
 header {
 	display: flex;
 	justify-content: center;
@@ -21,7 +26,7 @@ header {
 	padding: 100px auto;
 	margin: 0 auto;
 	width: 100%;
-	height: 150px;
+	height: 110px;
 	z-index: 5;
 }
 
@@ -30,6 +35,7 @@ header h1 {
 }
 
 /* Main */
+
 main {
 	display: flex;
 	flex-direction: row;
@@ -40,6 +46,7 @@ main {
 }
 
 /* CohortListMenu */
+
 .cohort-list {
 	display: flex;
 	flex-direction: column;
@@ -84,6 +91,7 @@ main {
 }
 
 /* StudentList */
+
 .student-list {
 	display: flex;
 	flex-direction: column;
@@ -116,6 +124,7 @@ main {
 }
 
 /* StudentCard */
+
 .student-card {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -181,26 +190,21 @@ main {
 	grid-row: 2;
 }
 
-.student-details-color1 {
-	color: rgb(175, 79, 56);
-}
-
-.student-details-color2 {
-	color: black;
-}
-
-.show-more {
-	background-color: blanchedalmond;
-	border-bottom-left-radius: 12px;
-	border-bottom-right-radius: 12px;
-}
-
 .show-btn-section {
 	display: grid;
 	grid-column: 1;
 	margin-left: 33.3%;
 	margin-bottom: 10px;
 }
+
+.show-more,
+.notes-aside {
+	background-color: blanchedalmond;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+
+/* Show Section Button */
 
 .show-btn {
 	background-color: rgb(255, 238, 0, 0.7);
@@ -221,23 +225,15 @@ main {
 	transform: scale(1.05);
 }
 
-/* StudentDetailsCard */
+/* StudentDetails */
 
 .details-card {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 1fr / span 3;
-}
-/* display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: flex-start;
-	width: 100%;
-	padding: 20px; */
-
-.details-aside h3 {
-	color: rgb(115, 52, 37);
-	margin-bottom: 10px;
+	grid-template-rows: auto;
+	justify-items: center;
+	align-content: space-around;
+	padding: 30px;
 }
 
 .details-aside {
@@ -245,18 +241,29 @@ main {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	gap: 12px;
+	gap: 18px;
 	margin-bottom: 1.1em;
+}
+
+.details-aside h3 {
+	color: rgb(115, 52, 37);
+	margin-bottom: 10px;
+}
+
+.student-details-color1 {
+	color: rgb(175, 79, 56);
+}
+
+.student-details-color2 {
+	color: black;
 }
 
 /* OneOnOneNotes */
 
 .notes-aside {
 	display: grid;
-	grid-column: 1 / span 3;
-	grid-row: 3 / 50px;
 	justify-items: center;
-	align-items: center;
+	align-items: stretch;
 	padding: 25px 0;
 	background-color: rgb(251, 245, 234);
 }
@@ -267,12 +274,14 @@ main {
 	margin-bottom: 15px;
 }
 
-.notes-aside form {
+.notes-aside-form {
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 	border: 2px solid rgb(115, 52, 37);
 	width: 90%;
 	padding: 25px;
+	gap: 10px;
 }
 
 /* OneOnOneNotes Form Button */
