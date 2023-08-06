@@ -125,7 +125,12 @@ export default function StudentDetailsCard({
 					)}
 				</h4>
 			</aside>
-			<OneOnOneNotes notes={notes} />
+
+			<OneOnOneNotes
+				notes={notes}
+				oneOnOneNotes={oneOnOneNotes}
+				setOneOnOneNotes={setOneOnOneNotes}
+			/>
 		</div>
 	);
 }
