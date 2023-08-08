@@ -304,3 +304,7 @@ main {
 	cursor: pointer;
 	transform: scale(1.05);
 }
+
+.notes-aside ul li {
+	margin-top: 15px;
+}

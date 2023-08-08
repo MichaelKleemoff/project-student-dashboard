@@ -14,9 +14,9 @@ export default function StudentDetailsCard({
 	certificationsGitHub,
 	certificationsMockInterview,
 	notes,
+	student,
 }) {
-	const [oneOnOneNotes, setOneOnOneNotes] = useState([]);
-	console.log(notes);
+	const [oneOnOneNotes, setOneOnOneNotes] = useState(notes);
 
 	const percentFormat = Number(
 		((codewarsCurrentTotal / codewarsGoalTotal) * 100).toFixed(0)
@@ -139,7 +139,6 @@ export default function StudentDetailsCard({
 			</section>
 
 			<OneOnOneNotes
-				notes={notes}
 				oneOnOneNotes={oneOnOneNotes}
 				setOneOnOneNotes={setOneOnOneNotes}
 			/>
